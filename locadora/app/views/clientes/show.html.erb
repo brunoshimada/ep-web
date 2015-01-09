@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>CPF:</strong>
+  <%= @cliente.cpf %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @cliente.nome %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @cliente.email %>
+</p>
+
+<p>
+  <strong>Celular:</strong>
+  <%= @cliente.celular %>
+</p>
+
+<p>
+  <strong>Data nascimento:</strong>
+  <%= @cliente.data_nascimento %>
+</p>
+
+<%= link_to 'Atualizar', edit_cliente_path(@cliente) %> |
+<%= link_to 'Voltar', clientes_path %>

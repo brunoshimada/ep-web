@@ -1,0 +1,2 @@
+module AlugaJogosHelper
+end

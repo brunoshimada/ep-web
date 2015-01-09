@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_cliente: 1
+  id_jogo: 1
+  data_alugel: 2015-01-09 12:38:50
+  valor: 1.5
+
+two:
+  id_cliente: 1
+  id_jogo: 1
+  data_alugel: 2015-01-09 12:38:50
+  valor: 1.5

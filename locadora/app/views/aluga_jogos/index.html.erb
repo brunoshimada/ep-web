@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de Alugueis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id cliente</th>
+      <th>Id jogo</th>
+      <th>Data alugel</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aluga_jogos.each do |aluga_jogo| %>
+      <tr>
+        <td><%= aluga_jogo.id_cliente %></td>
+        <td><%= aluga_jogo.id_jogo %></td>
+        <td><%= aluga_jogo.data_alugel %></td>      
+        <td><%= link_to 'Detalhes', aluga_jogo %></td>
+        <td><%= link_to 'Atualizar', edit_aluga_jogo_path(aluga_jogo) %></td>
+        <td><%= link_to 'Excluir', aluga_jogo, method: :delete, data: { confirm: 'Confirmar exclusão?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Cadastrar Aluguel', new_aluga_jogo_path %>
+<%= link_to 'Voltar', root_path %>

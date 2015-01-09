@@ -1,0 +1,33 @@
+<%= form_for(@aluga_jogo) do |f| %>
+  <% if @aluga_jogo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aluga_jogo.errors.count, "error") %> prohibited this aluga_jogo from being saved:</h2>
+
+      <ul>
+      <% @aluga_jogo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_cliente %><br>
+    <%= f.number_field :id_cliente %>
+  </div>
+  <div class="field">
+    <%= f.label :id_jogo %><br>
+    <%= f.number_field :id_jogo %>
+  </div>
+  <div class="field">
+    <%= f.label :data_alugel %><br>
+    <%= f.datetime_select :data_alugel , start_year: 2015%>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br>
+    <%= f.text_field :valor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

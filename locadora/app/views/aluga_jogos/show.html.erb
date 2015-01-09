@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id cliente:</strong>
+  <%= @aluga_jogo.id_cliente %>
+</p>
+
+<p>
+  <strong>Id jogo:</strong>
+  <%= @aluga_jogo.id_jogo %>
+</p>
+
+<p>
+  <strong>Data alugel:</strong>
+  <%= @aluga_jogo.data_alugel %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @aluga_jogo.valor %>
+</p>
+
+<%= link_to 'Atualizar', edit_aluga_jogo_path(@aluga_jogo) %> |
+<%= link_to 'Voltar', aluga_jogos_path %>
