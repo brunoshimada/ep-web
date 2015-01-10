@@ -1,0 +1,58 @@
+﻿Modelo Cliente
+
+
+Para se inserir dados no modelo Cliente usar o esqueleto abaixo:
+
+
+INSERT INTO clientes (cpf,nome,email,celular,data_nascimento)
+VALUES (?,?,?,?,?);
+
+
+Exemplo:
+
+
+INSERT INTO clientes (cpf,nome,celular,email,data_nascimento)
+VALUES (‘12345678901’,’João’,’joao@email.com’,’12345678901’,’01/01/1970’);
+
+
+Modelo Jogo
+
+
+Para se inserir dados no modelo Jogo usar o esqueleto abaixo:
+
+
+INSERT INTO jogos (nome,plataforma,categoria)
+VALUES (?,?,?);
+
+
+Exemplo:
+
+
+INSERT INTO jogos (nome,plataforma,categoria)
+VALUES (‘Super Mario World’,’SNES’,’Plataforma’);
+
+
+Modelo Aluga_Jogo
+
+
+Para se inserir dados no relacionamento usar o esqueleto abaixo:
+
+
+INSERT INTO aluga_jogos (id_cliente,id_jogo,data_aluguel,valor)
+VALUES (?,?,?,?);
+
+
+Exemplo:
+
+
+INSERT INTO aluga_jogos (id_cliente,id_jogo,data_aluguel,valor)
+VALUES (1,1,’09/01/2015’,10);
+
+
+Para se exibir os alugueis e verificar os dados associados a eles usar o comando SQL abaixo:
+
+
+SELECT a.id_cliente , c.id , c.cpf, c.nome, a.id_jogo , j.id , j.nome , a.data_alugel
+FROM clientes AS c, jogos AS j, aluga_jogos AS a
+WHERE c.id = a.id_cliente
+AND a.id_jogo = j.id
