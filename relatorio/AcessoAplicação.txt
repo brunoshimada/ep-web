@@ -1,0 +1,4 @@
+﻿Para se acessar a aplicação após iniciar o servidor acessar pelo navegador a página:
+
+
+http://localhost:3000
